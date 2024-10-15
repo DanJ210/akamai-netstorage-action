@@ -35,10 +35,6 @@ Use the following to convert your key inline to PEM format `ssh-keygen -p -m PEM
 **Required**
 uploadDirectory: '1234' Upload Directory in AkamaiNetStorage
 
-### `artifcats path`
-**Required**
-path: 'dir' artifacts path
-
 ### `domainName`
 **Required**
 domainName: 'example1' Upload domain name in Akamai Netstorage
@@ -53,14 +49,13 @@ Place in a `.yml` file such as this one in your `.github/workflows` folder. [Ref
 
 ```yaml
 steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Build and Deploy
       uses: jdmevo123/akamai-netstorage-action@1.0
       env:
         AKAMAI_PRIVATEKEY: ${{ secrets.AKAMAI_PRIVATEKEY }}
       with:
         uploadDirectory: '12345'
-        path: 'dir'
         domainName: 'example1'
         nspath: 'static'
 ```

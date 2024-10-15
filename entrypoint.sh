@@ -2,9 +2,8 @@
 set -e
 #set -o pipefail
 cpCode=$1
-path=$2
-domainName=$3
-nspath=$4
+domainName=$2
+nspath=$3
 
 #Authorise SSH host
 mkdir -p /root/.ssh
@@ -16,5 +15,5 @@ echo "${AKAMAI_PRIVATEKEY}" > /root/.ssh/privatekey
 chmod 600 /root/.ssh/privatekey
 
 # Upload to NetStorage
-scp -i /root/.ssh/privatekey -o 'HostKeyAlgorithms=+ssh-dss' -o 'StrictHostKeyChecking no' -r /github/workspace/${path}/ sshacs@${domainName}.scp.upload.akamai.com:/${nspath}  
+scp -i /root/.ssh/privatekey -o 'HostKeyAlgorithms=+ssh-dss' -o 'StrictHostKeyChecking no' -r /github/workspace/ sshacs@${domainName}.scp.upload.akamai.com:/${nspath}  
   
