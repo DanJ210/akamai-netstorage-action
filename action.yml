@@ -1,6 +1,6 @@
 name: "Customized Akamai Netstorage Action"
 description: "GitHub Action to upload to Akamai NetStorage via Akamai API's"
-author: jdmevo123
+author: danj210
 inputs:
   uploadDirectory:
     description:  'Netstorage Upload Directory'
