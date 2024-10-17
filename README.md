@@ -6,7 +6,7 @@
   </p>
 </p>
 
-# Deploy to Akamai Netstorage  
+# Deploy to Akamai Netstorage
 This action allows you to deploy artifacts to Akamai NetStorage.
 
 Akamai NetStorage is a holistic solution for maintaining large collections of on-demand digital content–including electronic images, streaming media files, software, documents, and other digital objects–while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.
